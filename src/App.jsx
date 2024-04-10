@@ -6,7 +6,7 @@ const App = () => {
           Coming Soon
           <br /> Transform Your Finances
           <br /> with <span className="font-bold text-green">QuickBooks</span>
-          &nbsp;cloud hosting!
+          &nbsp;cloud hosting !
         </h1>
         <h3 className="text-white lg:w-full md:w-[800px] md:text-2xl md:p-10 max-sm:p-8 max-sm:text-xl ">
           Stay tuned for an exciting update! QuickBooks is gearing up to
