@@ -2,7 +2,7 @@
   "name": "vite",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "./",
+  "homepage": "https://deploy-vite-eight.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
