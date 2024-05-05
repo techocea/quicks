@@ -30,6 +30,34 @@ export default function SolutionsPage() {
       point: "Trusted Intuit Authorization:Recognized QSP Partner",
     },
   ];
+  const BreadcrumbLinks = [
+    {
+      id: 1,
+      href: "/solutions/#versions",
+      name: "Versions",
+    },
+    {
+      id: 2,
+      href: "/solutions/#pricing",
+      name: "Pricing",
+    },
+    {
+      id: 3,
+      href: "/solutions/#why-us",
+      name: "Why Us",
+    },
+    {
+      id: 4,
+      href: "/solutions/#benefits",
+      name: "Benefits",
+    },
+    {
+      id: 5,
+      href: "/contact",
+      name: "Contact",
+    },
+  ];
+
   return (
     <>
       <div className="relative min-h-[500px] h-full ">
@@ -54,33 +82,16 @@ export default function SolutionsPage() {
         <div className="absolute bottom-[-2rem] left-1/2 shadow-lg -translate-x-1/2 bg-white p-6 max-w-[630px] max-md:w-[340px] border-0 rounded-xl ">
           <Breadcrumb className="flex">
             <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/solutions/#versions">
-                  Versions
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/solutions/#pricing">
-                  Pricing
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/solutions/#why-us">
-                  Why Us
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/solutions/#benefits">
-                  Benefits
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/contact">Get Started</BreadcrumbLink>
-              </BreadcrumbItem>
+              {BreadcrumbLinks.map((item) => (
+                <>
+                  <BreadcrumbItem key={item.id}>
+                    <BreadcrumbLink href={item.href}>
+                      {item.name}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                </>
+              ))}
             </BreadcrumbList>
           </Breadcrumb>
         </div>

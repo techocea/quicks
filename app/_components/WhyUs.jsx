@@ -45,19 +45,19 @@ export default function WhyUs() {
             </Button>
           </div>
         </div>
-        <div className="relative max-md:min-w-[338px] flex items-center justify-center">
+        <div className="relative flex items-center justify-center">
           <Image
             src="/Lady.png"
             alt="quickbooks"
-            width={338}
-            height={413}
+            width={390}
+            height={480}
             className="object-cover relative"
           />
         </div>
       </section>
       <section className="bg-secondary h-full border rounded-[4rem] max-md:rounded-none mx-10 p-10 max-md:mx-0 max-md:my-16">
         <div className="flex flex-col gap-y-10">
-          <div className="lg:flex max-md:flex-col items-start justify-between text-white ">
+          <div className="lg:flex max-md:flex-col items-start max-md:text-center  justify-between text-white ">
             <h1 className="font-bold lg:text-4xl md:text-2xl max-md:text-lg lg:max-w-[480px] max-md:w-auto">
               Manage your finances with ease and precision
             </h1>
@@ -69,7 +69,7 @@ export default function WhyUs() {
               drive your business forward.
             </p>
           </div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 max-md:grid-cols-1 items-center justify-between w-full gap-[41px]">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 max-md:grid-cols-1 items-center justify-between max-md:text-center w-full gap-[41px]">
             <CardComponent
               icon={<FolderKanban />}
               title="Efficient Cash Flow Management"
@@ -101,7 +101,7 @@ export default function WhyUs() {
 function CardComponent({ icon, title, description }) {
   return (
     <>
-      <div className="max-w-[320px] flex flex-col gap-y-4">
+      <div className="max-w-[320px] flex flex-col items-center justify-center gap-y-4">
         <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
           <span className="text-white">{icon}</span>
         </div>

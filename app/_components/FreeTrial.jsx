@@ -5,9 +5,9 @@ import Image from "next/image";
 export default function FreeTrialSection() {
   return (
     <>
-      <section className="lg:p-10 max-md:p-7 flex items-center justify-center max-md:flex-col gap-x-12 max-md:gap-y-10">
-        <div className="flex flex-col gap-y-4 lg:max-w-[465px]">
-          <h1 className="text-5xl max-md:text-3xl text-main font-semibold">
+      <section className="lg:p-10 max-md:p-7 md:flex max-md:flex-col  items-center justify-center  gap-x-12 max-md:gap-y-10">
+        <div className="flex flex-col gap-y-4 lg:max-w-[465px] md:w-[400px]">
+          <h1 className="md:text-4xl text-5xl max-md:text-3xl text-main font-semibold">
             Start Your Free Trial Today
           </h1>
           <p>
@@ -19,7 +19,7 @@ export default function FreeTrialSection() {
             <Button variant="outline">Demo</Button>
           </div>
         </div>
-        <div>
+        <div className="md:w-[300px]">
           <Image src="/Man.png" alt="quickbooks" width={390} height={480} />
         </div>
       </section>

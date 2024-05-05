@@ -2,6 +2,7 @@ import { Kodchasan } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import Head from "next/head";
 
 const kodchasan = Kodchasan({
   subsets: ["latin"],
@@ -16,6 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.svg" />
+      </Head>
       <body className={kodchasan.className}>
         <Header />
         {children}

@@ -26,14 +26,14 @@ export default function WhyUs() {
     {
       id: 4,
       icon: <WrenchIcon />,
-      title: "Reduced Cost of Ownership",
+      title: "Reduced Cost ",
       description:
         "Eliminate the need for costly IT infrastructure setups and dedicated management teams. Transition to Visioncore Technologies Cloud for a seamless QuickBooks Desktop-like experience.",
     },
     {
       id: 5,
       icon: <WrenchIcon />,
-      title: "Compliances and Regulations",
+      title: "Regulations",
       description:
         "All our data centers hold SSAE-18 Type-II (SOC-2) certification, ensuring compliance with HIPAA and PCI DSS standards. This ensures SLA-backed 99.9% uptime and robust data availability.",
     },
@@ -73,12 +73,12 @@ export default function WhyUs() {
               }`}
             >
               <div>
-                <div className="flex items-start gap-x-2 text-lg">
+                <div className="flex items-start justify-center text-center gap-x-2 text-lg">
                   <span>{item.icon}</span>
                   {item.title}
                 </div>
               </div>
-              <div>{item.description}</div>
+              <div className="max-md:flex text-center">{item.description}</div>
             </div>
           ))}
         </div>
