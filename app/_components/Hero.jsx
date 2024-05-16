@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Popup from "../pricing/_components/Popup";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -21,11 +23,13 @@ export default function Hero() {
           make informed decisions.
         </p>
         <div className="flex max-md:flex-col max-md:w-full gap-x-4 max-md:gap-y-4">
-          <Button variant="default" className="rounded-none">
-            Get Started
-          </Button>
-          <Button variant="outline" className="rounded-none">
-            Learn More
+          <Popup
+            subject="Get Started"
+            title="Get started with a free registration"
+            description="Unlock the full potential of your business with the perfect QuickBooks product."
+          />
+          <Button variant="outline" className="rounded-lg" asChild>
+            <Link href="/solutions">Learn More</Link>
           </Button>
         </div>
       </div>

@@ -55,7 +55,7 @@ export default function PriceComponent() {
   return (
     <section
       id="pricing"
-      className="h-full lg:m-16 md:p-8 max-md:py-16 max-md:px-8"
+      className="h-full lg:mx-16 md:p-8 max-md:py-16 max-md:px-8"
     >
       <div className="flex flex-col gap-y-5">
         <div>
@@ -69,11 +69,6 @@ export default function PriceComponent() {
             <PriceCardComponent key={item.id} data={item} index={index} />
           ))}
         </div>
-        <div className="flex text-center items-center justify-center mt-4 text-main font-bold text-md underline">
-          <Link href="/pricing" className="uppercase">
-            explore more in pricing
-          </Link>
-        </div>
       </div>
     </section>
   );
@@ -82,7 +77,9 @@ export default function PriceComponent() {
 function PriceCardComponent({ data, index }) {
   const cardClass = index === 1 ? "bg-main text-white" : "bg-slate-200";
   return (
-    <Card className={cardClass}>
+    <Card
+      className={`${cardClass} hover:scale-105 max-md:hover:scale-100 duration-200 ease-in-out cursor-pointer`}
+    >
       <CardHeader>
         <CardTitle>{data.title}</CardTitle>
         <CardDescription>{data.purpose}</CardDescription>
@@ -91,7 +88,9 @@ function PriceCardComponent({ data, index }) {
       <Separator className="bg-black/50" />
       <CardContent>
         <div className="my-4 flex justify-center w-full">
-          <Button className="w-full rounded-full">Get Started</Button>
+          <Button className="w-full rounded-full" asChild>
+            <Link href="/pricing">Get Started</Link>
+          </Button>
         </div>
         <p>Includes:</p>
         <ul>

@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import Popup from "../pricing/_components/Popup";
 
 export default function WhyUs() {
   const whyUsPoints = [
@@ -17,8 +19,8 @@ export default function WhyUs() {
 
   return (
     <>
-      <section className="h-full flex gap-x-10 max-md:flex-col max-md:gap-y-16 justify-between xl:justify-center xl:gap-x-16 w-full lg:p-16 p-10 max-md:px-7">
-        <div className="max-w-[790px] flex flex-col gap-y-4 max-md:gap-y-6 justify-between max-md:h-full flex-1">
+      <section className="h-full flex gap-x-10 max-md:flex-col max-md:gap-y-16  w-full lg:p-16 p-10 max-md:px-7">
+        <div className="max-w-[790px] flex flex-col gap-y-8 max-md:gap-y-6 max-md:h-full flex-1">
           <h1 className="text-secondary font-bold text-4xl max-md:text-2xl">
             Effortlessly manage your finances with QuickBooks
           </h1>
@@ -27,21 +29,26 @@ export default function WhyUs() {
             you to focus on what you do best.
           </p>
           <div>
-            {whyUsPoints.map((item, index) => (
-              <ul key={index} className="flex flex-col gap-y-10">
-                <li className="flex gap-x-3 max-md:text-sm text-secondary font-medium">
+            <ul className="flex flex-col gap-y-4">
+              {whyUsPoints.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex gap-x-3 max-md:text-sm text-secondary font-medium"
+                >
                   <BookOpen className="text-primary" />
                   {item}
                 </li>
-              </ul>
-            ))}
+              ))}
+            </ul>
           </div>
-          <div className="flex max-md:flex-col max-md:gap-y-4 gap-x-4 max-md:w-full ">
-            <Button variant="default" className="rounded-none">
-              Get Started
-            </Button>
-            <Button variant="outline" className="rounded-none">
-              Learn More
+          <div className="flex max-md:flex-col max-md:gap-y-4 gap-x-6 w-full">
+            <Popup
+              subject="Get Started"
+              title="Get started with a free registration"
+              description="Unlock the full potential of your business with the perfect QuickBooks product."
+            />
+            <Button variant="outline" className="text-primary" asChild>
+              <Link href="/solutions">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -87,7 +94,9 @@ export default function WhyUs() {
             />
           </div>
           <div className="flex max-md:flex-col max-md:gap-y-4 gap-x-4 max-md:w-full ">
-            <Button className="rounded-none">Learn More</Button>
+            <Button className="rounded-lg" asChild>
+              <Link href="/solutions">Learn More</Link>
+            </Button>
             <Button variant="desctructive" className="text-primary">
               Sign Up <ChevronRight />
             </Button>
@@ -101,7 +110,7 @@ export default function WhyUs() {
 function CardComponent({ icon, title, description }) {
   return (
     <>
-      <div className="max-w-[320px] flex flex-col items-center justify-center gap-y-4">
+      <div className="max-w-[320px] flex flex-col items-start max-md:items-center max-md:justify-center  gap-y-4">
         <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
           <span className="text-white">{icon}</span>
         </div>

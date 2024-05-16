@@ -13,7 +13,7 @@ export default function Header() {
     setNav(!nav);
   };
 
-  const Links = [
+  const HeaderLinks = [
     {
       id: 1,
       to: "/", // Define the `to` property for the home link
@@ -29,11 +29,6 @@ export default function Header() {
       to: "/pricing",
       name: "Pricing",
     },
-    {
-      id: 4,
-      to: "/contact",
-      name: "Contact",
-    },
   ];
 
   return (
@@ -47,7 +42,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="lg:flex items-center gap-8 max-md:hidden md:hidden">
-          {Links.map((item) => (
+          {HeaderLinks.map((item) => (
             <Link href={item.to} key={item.id}>
               <p
                 className={` hover:text-primary duration-150 font-semibold ${
@@ -83,7 +78,7 @@ export default function Header() {
           }`}
         >
           <div className="flex flex-col items-center gap-8 translate-y-1/2">
-            {Links.map((item) => (
+            {HeaderLinks.map((item) => (
               <Link href={item.to} key={item.id}>
                 <p
                   className={` hover:text-primary duration-150 font-semibold ${

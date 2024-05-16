@@ -12,7 +12,7 @@ export default function Solutions() {
     <>
       <section
         id="why-us"
-        className="max-md:pb-[216px] relative flex max-md:flex-col items-center justify-center gap-x-10 max-md:gap-y-10 px-[5rem] md:p-[5rem] py-16 lg:py-20 max-md:py-16 max-md:px-4"
+        className="max-md:pb-[216px] relative flex max-md:flex-col items-center  w-full gap-x-16 max-md:gap-y-10 px-[5rem] md:p-[5rem] py-16 lg:py-20 max-md:py-16 max-md:px-4"
       >
         <div className="flex flex-col gap-y-4 max-w-[590px] w-full">
           <h1 className="xl:text-4xl max-md:text-3xl font-bold text-main">
@@ -34,7 +34,7 @@ export default function Solutions() {
         {/* Image */}
         <div className="relative ">
           <Image src="/qb_hosting.webp" width={360} height={360} />
-          <div className="absolute -bottom-10 -right-20 max-md:right-0 max-md:-bottom-40">
+          <div className="absolute -bottom-10 -right-40 max-md:right-0 max-md:-bottom-40">
             <SideCard SideCardData={SideCardData} />
           </div>
         </div>

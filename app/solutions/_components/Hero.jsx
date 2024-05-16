@@ -6,9 +6,10 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { CirclePlus, Clock10Icon, ShieldCheck, Wrench } from "lucide-react";
+import React from "react";
 
 export default function SolutionsPage() {
-  const solutions = [
+  const Solutions = [
     {
       id: 1,
       icon: <Clock10Icon />,
@@ -70,7 +71,7 @@ export default function SolutionsPage() {
               QuickBooks Hosting
             </h1>
             <ul className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
-              {solutions.map((item) => (
+              {Solutions.map((item) => (
                 <li key={item.id} className="flex items-start gap-x-4">
                   <span className="text-[#0FD46C]">{item.icon}</span>
                   <p className="text-white text-sm ">{item.point}</p>
@@ -79,20 +80,20 @@ export default function SolutionsPage() {
             </ul>
           </div>
         </div>
-        <div className="absolute bottom-[-2rem] left-1/2 shadow-lg -translate-x-1/2 bg-white p-6 max-w-[630px] max-md:w-[340px] border-0 rounded-xl ">
-          <Breadcrumb className="flex">
-            <BreadcrumbList>
-              {BreadcrumbLinks.map((item) => (
-                <>
-                  <BreadcrumbItem key={item.id}>
+        <div className="max-md:hidden absolute bottom-[-2rem] left-1/2 shadow-lg -translate-x-1/2 bg-white p-6 sm:max-w-[640px] border-0 rounded-xl">
+          <Breadcrumb className="flex ">
+            {BreadcrumbLinks.map((item) => (
+              <React.Fragment key={item.id}>
+                <BreadcrumbList className="">
+                  <BreadcrumbItem>
                     <BreadcrumbLink href={item.href}>
                       {item.name}
                     </BreadcrumbLink>
+                    <BreadcrumbSeparator />
                   </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                </>
-              ))}
-            </BreadcrumbList>
+                </BreadcrumbList>
+              </React.Fragment>
+            ))}
           </Breadcrumb>
         </div>
       </div>

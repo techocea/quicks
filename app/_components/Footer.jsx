@@ -1,7 +1,25 @@
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
+  const FooterLinks = [
+    {
+      id: 1,
+      to: "/",
+      name: "Home",
+    },
+    {
+      id: 2,
+      to: "/solutions",
+      name: "Solutions",
+    },
+    {
+      id: 3,
+      to: "/pricing",
+      name: "Pricing",
+    },
+  ];
   return (
     <footer className="bg-black text-white p-10 flex items-center justify-center">
       <div className="flex max-md:flex-col items-center max-md:items-start justify-evenly max-md:justify-between max-md:gap-y-8 w-full">
@@ -17,11 +35,11 @@ export default function Footer() {
         </div>
         <Separator className="bg-white md:hidden" />
         <div className="flex  items-center space-x-4">
-          <ul className="flex max-md:flex-col max-md:gap-y-4 gap-x-4">
-            <li>Solutions</li>
-            <li>Pricing</li>
-            <li>More</li>
-          </ul>
+          {FooterLinks.map((item) => (
+            <Link href={item.to} key={item.id}>
+              <p>{item.name}</p>
+            </Link>
+          ))}
         </div>
         <Separator className="bg-white  md:hidden" />
         <div className="flex flex-col gap-y-2">
